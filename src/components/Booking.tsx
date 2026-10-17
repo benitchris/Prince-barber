@@ -18,6 +18,7 @@ import {
   services,
   siteConfig,
 } from "@/config/site";
+import { asset } from "@/lib/asset";
 import { Reveal } from "@/components/Reveal";
 import { SectionLabel } from "@/components/ui/SectionLabel";
 import { cn } from "@/lib/cn";
@@ -630,7 +631,7 @@ export function Booking() {
         className="pointer-events-none absolute bottom-0 right-0 hidden select-none opacity-[0.035] xl:block"
       >
         <Image
-          src="/images/gallery/fade.jpg"
+          src={asset("/images/gallery/fade.jpg")}
           alt=""
           width={864}
           height={1080}

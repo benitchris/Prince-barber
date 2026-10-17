@@ -3,6 +3,7 @@ import { ArrowUpRight, Quote, Star, UserRound } from "lucide-react";
 import { testimonials } from "@/config/site";
 import { Reveal } from "@/components/Reveal";
 import { SectionLabel } from "@/components/ui/SectionLabel";
+import { asset } from "@/lib/asset";
 
 function StarRow() {
   return (
@@ -83,7 +84,7 @@ function ReviewCard({
         {review.image ? (
           <span className="relative size-11 overflow-hidden rounded-full border border-gold/40">
             <Image
-              src={review.image}
+              src={asset(review.image)}
               alt=""
               fill
               unoptimized

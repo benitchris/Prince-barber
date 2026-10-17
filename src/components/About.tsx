@@ -2,6 +2,7 @@ import Image from "next/image";
 import { ArrowUpRight } from "lucide-react";
 import { Reveal } from "@/components/Reveal";
 import { SectionLabel } from "@/components/ui/SectionLabel";
+import { asset } from "@/lib/asset";
 
 const principles = [
   {
@@ -41,7 +42,7 @@ export function About() {
               />
               <div className="relative aspect-[4/5] overflow-hidden bg-charcoal">
                 <Image
-                  src="/images/about.jpg"
+                  src={asset("/images/about.jpg")}
                   alt="A Prince Barber barber in a black apron holding professional clippers."
                   fill
                   unoptimized

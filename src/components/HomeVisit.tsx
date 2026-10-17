@@ -4,6 +4,7 @@ import { siteConfig } from "@/config/site";
 import { Reveal } from "@/components/Reveal";
 import { SectionLabel } from "@/components/ui/SectionLabel";
 import { BookingTrigger } from "@/components/BookingTrigger";
+import { asset } from "@/lib/asset";
 
 const steps = [
   {
@@ -32,7 +33,7 @@ export function HomeVisit() {
       <div className="grid lg:grid-cols-2">
         <Reveal className="relative min-h-[380px] overflow-hidden sm:min-h-[520px] lg:min-h-full">
           <Image
-            src="/images/gallery/home-visit.jpg"
+            src={asset("/images/gallery/home-visit.jpg")}
             alt="A Prince Barber barber giving a precision haircut during a home visit."
             fill
             unoptimized

@@ -12,6 +12,7 @@ import {
 import { gallery } from "@/config/site";
 import { Reveal } from "@/components/Reveal";
 import { SectionLabel } from "@/components/ui/SectionLabel";
+import { asset } from "@/lib/asset";
 
 export function Gallery() {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
@@ -96,7 +97,7 @@ export function Gallery() {
                 className="group relative block aspect-[4/5] w-full overflow-hidden bg-charcoal text-left"
               >
                 <Image
-                  src={item.src}
+                  src={asset(item.src)}
                   alt={item.alt}
                   fill
                   unoptimized
@@ -180,7 +181,7 @@ export function Gallery() {
           <div className="relative flex max-h-full w-full max-w-3xl flex-col items-center">
             <div className="relative max-h-[78svh] overflow-hidden">
               <Image
-                src={activeItem.src}
+                src={asset(activeItem.src)}
                 alt={activeItem.alt}
                 width={900}
                 height={1125}

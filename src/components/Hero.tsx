@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { ArrowDown, ArrowUpRight, Home } from "lucide-react";
 import { siteConfig } from "@/config/site";
+import { asset } from "@/lib/asset";
 
 export function Hero() {
   return (
@@ -9,7 +10,7 @@ export function Hero() {
       className="relative isolate flex min-h-[100svh] flex-col overflow-hidden bg-ink"
     >
       <Image
-        src="/images/hero.jpg"
+        src={asset("/images/hero.jpg")}
         alt="A barber giving a precision haircut in a warmly lit, black-and-gold barbershop."
         fill
         priority
